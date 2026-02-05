@@ -45,7 +45,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"❌ Ошибка: {str(e)}")
 
-if name == 'main':
+if __name__ == '__main__':
     # Запускаем веб-заглушку в отдельном потоке
     threading.Thread(target=run_health_check_server, daemon=True).start()
     
