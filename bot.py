@@ -43,7 +43,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         print(f"Ошибка ИИ: {e}")
 
-if name == 'main':
+if __name__ == '__main__':
     # Запуск заглушки порта в фоновом потока
     threading.Thread(target=run_server, daemon=True).start()
     
