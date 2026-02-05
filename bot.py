@@ -33,7 +33,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"❌ Ошибка: {str(e)}")
 
-if name == 'main':
+if __name__ == '__main__':
     # Запуск бота
     app = Application.builder().token(TOKEN).build()
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
