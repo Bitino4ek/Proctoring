@@ -38,7 +38,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"❌ Ошибка ИИ: {str(e)}")
 
-if name == 'main':
+if __name__ == '__main__':
     if not TOKEN or not MY_CHAT_ID:
         print("Ошибка: Переменные окружения не настроены!")
     else:
